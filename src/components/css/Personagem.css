@@ -1,0 +1,43 @@
+div.image {
+  text-align: center;
+  position: relative;
+  
+  /* border: 0px solid #474747; */
+  float: left;
+  height: 250px;
+  width: 238px;
+  background-color:	rgb(26, 0, 0);
+  margin:  10px 0px 200px 30px;
+}
+
+div.image:hover {
+  border: 1px solid474747#f0f0f0;
+
+}
+
+div.image img {
+  margin:10px;
+  text-align: center;
+  width: auto;
+  height: 175px;
+}
+
+div.cut {
+  border-right-color: #474747;
+  border-style: solid;
+  border-top-color: transparent;
+  border-width: 52px 49px 0 0;
+  position: absolute;
+  right: -1%;
+}
+div.dates{
+  background-color: #474747;
+  /* margin: 0% 0% 0% 0%; */
+  height: 100%;
+  padding: 1% 1% 1% 1%;
+}
+div.date{
+  
+  color:white;
+  margin: 25% 20% 0% 20%
+}

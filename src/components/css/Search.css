@@ -1,0 +1,12 @@
+div.bloco{
+  margin: -80px 5% 0px 5%
+}
+input[type=text] {
+    width: 100%;
+    background-color: #f0f0f0;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: none;
+    border-bottom: 2px solid black;
+  }
