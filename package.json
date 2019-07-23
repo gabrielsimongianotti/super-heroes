@@ -1,8 +1,8 @@
 {
-  "name": "node-react",
+  "name": "super-heroes",
   "version": "0.1.0",
   "private": true,
-  "proxy": "https://www.canalti.com.br/api",
+  "proxy": "",
   "dependencies": {
     "marvel-api": "^1.1.0",
     "react": "^16.8.6",

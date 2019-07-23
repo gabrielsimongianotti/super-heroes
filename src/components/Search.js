@@ -9,48 +9,51 @@ var marvel = api.createClient({
 });
 
 export default class Search extends Component {
-    state = {
-        response: [
-            {
-                "id": 0,
-                "modified": "",
-                "name": "",
-                 "description":"",
-                "thumbnail": {
-                    "path": "",
-                    "extension": ""
+    constructor() {
+        super();
+        this.state = {
+            data: '',
+            response: [
+                {
+                    "id": 0,
+                    "modified": "",
+                    "name": "",
+                    "description": "",
+                    "thumbnail": {
+                        "path": "",
+                        "extension": ""
+                    }
                 }
-            }
-        ]
-    };
+            ]
+        }
+    }
+    hanble(event) {
+        this.setState({
+            data: event.target.value
+        })
+    }
 
     async componentDidMount() {
-
-        //   marvel.characters.findAll()
-        //     .then(res => this.setState({ response: res.data }))
-        //     .fail(err => console.log(err))
-        //     .done();
         marvel.characters.findByName('spider-man')
             .then(res => this.setState({ response: res.data }))
             .fail(console.error)
             .done();
     }
-
-
     render() {
 
         return (
             <div>
                 <div class="bloco">
-                    <input type="text" name="fname" placeholder="Search.." />
+                    <input type="text" onChange={this.hanble.bind(this)} />
                     <button>pesquisar</button>
+                    <h1>{this.state.data}</h1>
                 </div>
-                <Personagem 
-                    name={this.state.response[0].name} 
+                <Personagem
+                    name={this.state.response[0].name}
                     description={this.state.response[0].description}
-                    image={this.state.response[0].thumbnail.path+'.'+this.state.response[0].thumbnail.extension}
+                    image={this.state.response[0].thumbnail.path + '.' + this.state.response[0].thumbnail.extension}
                 />
-                
+
             </div>
         );
     }
