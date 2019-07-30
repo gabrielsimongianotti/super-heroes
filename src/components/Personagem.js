@@ -7,7 +7,7 @@ class Personagem extends Component {
             <div>
                 <div className="dates">
                     <div className="image">
-                        <a href="/personagem">
+                        <a>
                             <img src={this.props.image} />
                         </a>
                         <div class="cut"></div>
