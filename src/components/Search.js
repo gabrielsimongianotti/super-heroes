@@ -34,19 +34,20 @@ export default class Search extends Component {
     }
 
     async componentDidMount() {
-        marvel.characters.findByName('spider-man')
+        console.log();
+        marvel.characters.findByName("spider-man")
             .then(res => this.setState({ response: res.data }))
             .fail(console.error)
             .done();
     }
-    render() {
 
+    render() {
         return (
             <div>
                 <div class="bloco">
                     <input type="text" onChange={this.hanble.bind(this)} />
-                    <button>pesquisar</button>
-                    <h1>{this.state.data}</h1>
+                    <button >pesquisar</button>
+                    {/* <h1>{this.state.data}</h1> */}
                 </div>
                 <Personagem
                     name={this.state.response[0].name}
